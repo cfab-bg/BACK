@@ -1,0 +1,52 @@
+<html>
+    <h1>akory aby</h1>
+  <script>
+    tablea = [
+        { "employerID": 1, "nom": "kilaolao",  "prenom": "salama",  "email": "gmail",  "date": "8989",},
+        { "employerID": 2, "nom": "catalogue",  "prenom": "salama",  "emae": "seg",  "date": "eing",},
+        { "employerID": 3, "nom": "resu",  "prenom": "salama",  "emfail": "string",  "date": "string",},
+        { "employerID": 4, "nom": "menabe",  "prenom": "salama",  "email": "stfefg",  "date": "string",},
+        { "employerID": 5, "nom": "mecie",  "prenom": "salama",  "emfsfail": "strfdsfing",  "date": "string",},
+        { "employerID": 6, "nom": "ndriamatio",  "prenom": "salama",  "email": "strisqng",  "date": "string",},
+        { "employerID": 7, "nom": "rakoto",  "prenom": "salama",  "email": "string",  "date": "string",},
+        { "employerID": 8, "nom": "rafanaka",  "prenom": "salama",  "email": "string",  "date": "string",}
+    ]
+
+    function mitady(tab=[], motcle = ""){
+    motcle =  motcle
+    bac = tab
+    result = []
+    for(let emp in bac){
+        employer = bac[emp]
+        console.log(emp)
+        champs = Object.values(employer)
+        verif = false
+        for(i in champs){
+            mot = String(champs[i])            
+            if(mot.indexOf(motcle)>=0){
+                verif = true;
+            }
+        }
+        if(verif){
+           result = result.concat(employer)
+        }
+       
+    }
+    return(result)
+}
+function mitadyMaro(tab=[], mot=''){
+    mots = mot.split(' ')
+    tab = tab
+    for(i in mots){
+        console.log(mots[i])
+        tab = mitady(tab, mots[i])
+    }
+    return tab
+}
+
+result = mitady(tablea, 'me')
+    for(let e in result){
+        console.log(result[e])
+    }
+  </script>  
+</html>
